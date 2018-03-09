@@ -1,12 +1,15 @@
 {
   "name": "36-d18",
   "version": "1.0.0",
+  "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "webpack",
+    "bundle": "webpack",
     "watch": "webpack-dev-server --inline --hot",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "heroku-postbuild": "webpack -p --progress",
+    "start":"node index.js"
   },
   "engines": {
     "node": "9.3.0"
@@ -15,7 +18,7 @@
     "globals": {
       "__DEBUG__": false,
       "process.env": {
-        "NODE_ENV": "testing"
+        "NODE_ENV": "production"
       }
     },
     "verbose": true,
@@ -54,5 +57,7 @@
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
   },
-  "description": ""
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
