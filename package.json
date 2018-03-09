@@ -9,7 +9,7 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "heroku-postbuild": "webpack -p --progress",
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "engines": {
     "node": "9.3.0"
